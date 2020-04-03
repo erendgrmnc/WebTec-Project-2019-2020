@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body
+{
+margin:30px;
+}
 .index_h1
 {
     color: blueviolet;
@@ -58,25 +62,29 @@ button
     padding: 2px,10px;
 }
 
+.my_container
+{
+margin: auto;
+border:1px;
+}
+
+.my_row
+{
+border:3px;
+}
+
+.my_column
+{
+margin: 50px;
+ 
+border:3px;
+
+}
+
+
+
+
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-    float: left;
-    max-width: 1000px;
-    width: 33.33%;
-    padding: 5px;
-  }
-  .column_right
-  {
-    float: right;
-    width: 33.33%;
-    padding: 5px;
-  }
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 
   .footer {
     background-color: #0099cc;
@@ -92,4 +100,100 @@ button
       font-size: larger;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color: black;
+  }
+
+  .ozgecmis
+  {
+      width: 1000px;
+      margin: auto;
+  }
+
+
+  /*SLİDE SHOW İÇİN GEREKEN STİL SINIFLARI*/
+
+  * {box-sizing:border-box}
+  .slider_container
+  {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+  }
+
+  .slider
+  {
+    display: block;
+    margin: auto;
+    width: 500px;
+    
+  }
+
+  .prev_button ,.next_button
+  {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6 ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+
+  }
+
+  .next_button
+  {
+      right:0;
+      border-radius: 3px 0 0 3px;
+  }
+
+.prev_button:hover, .next_button:hover
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.text
+{
+  color: black;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+   width: 500px;
+   
+}
+
+.picture_number 
+{
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover 
+  {
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
